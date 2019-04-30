@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Create a todo list for free">
     <link rel="stylesheet" href="/css/site.css">
-    <script src="/javascript/code.js"></script>
+    <link rel="stylesheet" href="/node_modules/js-datepicker/dist/datepicker.min.css">
     <title>Todo List</title>
 </head>
 <body>
@@ -17,6 +17,23 @@
         <label for="title">Title:</label>
         <input type="text" id="title">
         <span>*</span>
+        <br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" rows="8" cols="25"></textarea>
+        <span></span>
+        <br>
+
+        <label for="start-date">Start Date:</label>
+        <input type="text" id="start-date" class="due-date">
+        <span></span>
+        <br>
+        
+        <script src="/node_modules/js-datepicker/dist/datepicker.min.js"></script>
+        <script src="/javascript/code.js"></script>
+        <Script>
+            const picker = datepicker(".due-date");
+        </Script>
     </div>
 </body>
 </html>
