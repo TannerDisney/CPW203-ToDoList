@@ -28,7 +28,6 @@ function displayToDo(item) {
     itemPara.innerText =
         "Title: " + item.title + "\n" +
             "Description: " + item.description + "\n" +
-            "Start Date: " + item.startDate + "\n" +
             "Urgency: " + item.urgency;
     itemPara.setAttribute("data-desc", item.description);
     itemPara.onclick = toggleItemComplete;
