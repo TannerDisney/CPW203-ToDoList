@@ -28,6 +28,8 @@ function displayToDo(item) {
     itemPara.innerText =
         "Title: " + item.title + "\n" +
             "Description: " + item.description + "\n" +
+            "Start Date: " + item.startDate + "\n" +
+            "End Date: " + item.endDate + "\n" +
             "Urgency: " + item.urgency;
     itemPara.setAttribute("data-desc", item.description);
     itemPara.onclick = toggleItemComplete;
@@ -68,9 +70,9 @@ function getItemFromForm() {
         document.getElementById("title").value;
     item.description =
         document.getElementById("description").value;
-    var itemStartDate = document.getElementById("start-date").value;
+    var itemStartDate = document.getElementById("due-date").value;
     item.startDate = new Date(itemStartDate);
-    var itemEndDate = document.getElementById("end-date").value;
+    var itemEndDate = document.getElementById("due-date2").value;
     item.endDate = new Date(itemEndDate);
     item.isComplete =
         document.getElementById("is-complete").checked;

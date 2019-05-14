@@ -62,7 +62,9 @@ class ToDoItem
         let itemPara = document.createElement("p");
         itemPara.innerText = 
             "Title: " + item.title + "\n" + 
-            "Description: " + item.description + "\n" + 
+            "Description: " + item.description + "\n" +
+            "Start Date: " + item.startDate + "\n" + 
+            "End Date: " + item.endDate + "\n" +  
             "Urgency: " + item.urgency;
         itemPara.setAttribute("data-desc", item.description);
         itemPara.onclick = toggleItemComplete;
@@ -138,11 +140,11 @@ class ToDoItem
             (<HTMLTextAreaElement>document.getElementById("description")).value;
     
         let itemStartDate:string = 
-            (<HTMLInputElement>document.getElementById("start-date")).value;
+            (<HTMLInputElement>document.getElementById("due-date")).value;
         item.startDate = new Date(itemStartDate);
     
         let itemEndDate:string = 
-            (<HTMLInputElement>document.getElementById("end-date")).value;
+            (<HTMLInputElement>document.getElementById("due-date2")).value;
         item.endDate = new Date(itemEndDate);
     
         item.isComplete = 
