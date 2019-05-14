@@ -29,11 +29,38 @@
         <span></span>
         <br>
         
-        <script src="/node_modules/js-datepicker/dist/datepicker.min.js"></script>
-        <script src="/javascript/code.js"></script>
-        <Script>
-            const picker = datepicker(".due-date");
-        </Script>
+        <label for="end-date">End Date: </label>
+        <input id="end-date" class="due-date" type="text">
+        <span></span>
+        <br>
+
+        <label for="is-complete">Is Complete?</label>
+        <input type="checkbox" id="is-complete">
+        <br>
+
+        <label>Choose an urgency:</label>
+        <select id="urgency">
+            <option value="L">Low</option>
+            <option value="M">Medium</option>
+            <option value="H">High</option>
+        </select>
+        <br>
+
+        <button type="button">Add ToDo Item</button>
+
+    </div>
+    <div id="read-item">
+        <button type="button">Read Item</button>
+    </div>
+    <div id="todo-list">
+        
+    </div>
+
+    <script src="/node_modules/js-datepicker/dist/datepicker.min.js"></script>
+    <script src="/javascript/code.js"></script>
+    <Script>
+        const picker = datepicker(".due-date");
+    </Script>
     </div>
 </body>
 </html>
