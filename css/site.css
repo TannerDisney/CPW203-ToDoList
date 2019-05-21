@@ -5,6 +5,8 @@ div#todo-list > p, p.completed {
     border-radius: .3em; 
     display: inline-block;
     margin: .2em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
 }
 
 p.completed {
@@ -18,10 +20,11 @@ input, label {
 }
 
 header {
-    text-align: center;
+    margin-left: 0.5em; 
 }
+
 div#create-item {
     float:left; 
-    margin-right:65em; 
-    margin-left:40%
+    margin-right: 65em;
+    margin-left :0.5em; 
 }

@@ -147,9 +147,6 @@ class ToDoItem
             (<HTMLInputElement>document.getElementById("due-date2")).value;
         item.endDate = new Date(itemEndDate);
     
-        item.isComplete = 
-            (<HTMLInputElement>document.getElementById("is-complete")).checked;
-    
         let urgencyElem = <HTMLSelectElement>document.getElementById("urgency");
         item.urgency = urgencyElem.options[urgencyElem.selectedIndex].text;
     

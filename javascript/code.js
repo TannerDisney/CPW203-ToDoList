@@ -40,20 +40,18 @@ function toggleItemComplete() {
     currItem.classList.toggle("completed");
     var title = currItem.innerText;
     var desc = currItem.getAttribute("data-desc");
-    alert("--Completed ToDo-- " + "\n" + title);
+    // alert("--Completed ToDo-- " + "\n" + title);
 }
 function clearForm() {
     var textElements = document.querySelectorAll("input[type=text], textarea");
     for (var i = 0; i < textElements.length; i++) {
         textElements[i].value = "";
     }
-    var isCompleteBox = document.querySelector("#is-complete");
-    isCompleteBox.checked = false;
     var urgencyList = document.querySelector("#urgency");
     urgencyList.selectedIndex = 0;
 }
 function notifyUser() {
-    alert("Todo Item was saved successfully.");
+    //alert("Todo Item was saved successfully.");
     console.log("ToDo Item was saved to local storage successfully.");
 }
 function saveItem(item) {
@@ -74,8 +72,6 @@ function getItemFromForm() {
     item.startDate = new Date(itemStartDate);
     var itemEndDate = document.getElementById("due-date2").value;
     item.endDate = new Date(itemEndDate);
-    item.isComplete =
-        document.getElementById("is-complete").checked;
     var urgencyElem = document.getElementById("urgency");
     item.urgency = urgencyElem.options[urgencyElem.selectedIndex].text;
     return item;
