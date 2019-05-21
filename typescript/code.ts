@@ -31,7 +31,7 @@ class ToDoItem
         addBtn.onclick = processNewItem;
     
         let readItemBtn = <HTMLElement>
-            document.querySelector("#read-item > button");
+            document.getElementById("read-button");
         readItemBtn.onclick = readItem;
     }
     

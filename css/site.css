@@ -1,7 +1,7 @@
 div#todo-list > p, p.completed {
     background: red;
     color: white;  
-    padding: .5em;
+    padding: .3em;
     border-radius: .3em; 
     display: inline-block;
     margin: .2em;
@@ -11,4 +11,17 @@ p.completed {
     background: green !important;
     color: gold !important;
     text-decoration: line-through;
+}
+
+input, label {
+    display: block;
+}
+
+header {
+    text-align: center;
+}
+div#create-item {
+    float:left; 
+    margin-right:65em; 
+    margin-left:40%
 }

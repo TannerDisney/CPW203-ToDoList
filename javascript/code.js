@@ -6,7 +6,7 @@ var ToDoItem = (function () {
 window.onload = function () {
     var addBtn = document.querySelector("#create-item > button");
     addBtn.onclick = processNewItem;
-    var readItemBtn = document.querySelector("#read-item > button");
+    var readItemBtn = document.getElementById("read-button");
     readItemBtn.onclick = readItem;
 };
 var itemKey = "todo";
